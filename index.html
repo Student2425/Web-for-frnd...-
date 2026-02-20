@@ -3,296 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Manisha ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <title>A Magical Sunset For Mantasha</title>
     <style>
-        /* Ultra-Modern, Cinematic Lovely Red Theme */
-        :root {
-            --bg-color: #3b000e; 
-            --bg-gradient: radial-gradient(circle at center, #6b001a 0%, #240008 100%);
-            --text-main: #ffffff;
-            --text-muted: #ffb3c6;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap');
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg-gradient);
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        h1, h2 { font-family: 'Playfair Display', serif; font-weight: 600; }
-        
-        /* Butter Smooth Cinematic Slides */
-        .slide {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px) scale(0.98);
-            transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
-        }
-
-        .slide.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0) scale(1);
-            transition: opacity 1s ease 0.2s, transform 1s ease 0.2s; /* 0.2s delay for breathing room */
-        }
-
-        /* Borderless Typography */
-        .title-huge { font-size: 4.5rem; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; }
-        .title-medium { font-size: 3rem; margin-bottom: 30px; color: #ffffff; }
-        .body-text { font-size: 1.2rem; font-weight: 300; line-height: 1.8; max-width: 600px; color: rgba(255,255,255,0.9); margin-bottom: 20px; }
-        
-        .italic-text { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text-muted); font-size: 1.5rem; }
-
-        /* Minimalist Buttons */
-        .btn {
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 15px 40px;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 50px; 
-            margin-top: 40px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-        .btn:hover {
-            background: #ffffff;
-            color: var(--bg-color);
-            border-color: #ffffff;
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Flat Reasons Grid */
-        .reasons-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 700px; }
-        .reason-item { font-size: 1.3rem; font-weight: 300; padding: 10px 20px; color: var(--text-muted); }
-
-        /* Clean Checklist */
-        .future-list { text-align: left; margin-top: 20px; }
-        .future-item { font-size: 1.3rem; margin-bottom: 20px; font-weight: 300; display: flex; align-items: center; gap: 15px; }
-        .dot { height: 8px; width: 8px; background-color: var(--text-muted); border-radius: 50%; }
-
-        /* Timer */
-        .timer-text { font-size: 3.5rem; font-family: 'Playfair Display', serif; font-variant-numeric: tabular-nums; margin: 30px 0; }
-        .heart-icon { font-size: 2rem; color: var(--text-muted); animation: pulse 2s infinite; margin-bottom: 20px; }
-        
-        /* Proposal */
-        .btn-group { display: flex; gap: 20px; margin-top: 40px; }
-        .btn-primary { background: #ffffff; color: var(--bg-color); border: none; font-weight: 500; }
-        .btn-primary:hover { background: var(--text-muted); color: #000; }
-        .btn-dodge { position: relative; }
-
-        /* Poetry Words Animation */
-        #poetry-container {
-            font-size: 2.2rem;
+        body, html { 
+            width: 100%; height: 100%; overflow: hidden; 
+            background: #000; color: #fff;
             font-family: 'Playfair Display', serif;
-            line-height: 1.6;
-            max-width: 800px;
-            color: #ffffff;
-            display: none;
         }
-        .poetry-word {
-            opacity: 0;
-            transform: translateY(10px);
-            display: inline-block;
-            transition: opacity 0.8s ease, transform 0.8s ease;
-            margin-right: 8px;
+
+        /* SUNSET BACKGROUND */
+        .sunset-sky {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -4;
+            background: linear-gradient(135deg, #0d041c 0%, #3a0d35 30%, #a4244b 65%, #e86a43 100%);
+            background-size: 200% 200%;
+            animation: skyShift 15s ease-in-out infinite;
         }
-        .poetry-word.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes skyShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+        /* GLOWING SUN */
+        .glowing-sun {
+            position: fixed; bottom: -10%; left: 50%; transform: translateX(-50%);
+            width: 450px; height: 450px; 
+            background: radial-gradient(circle, rgba(255,251,224,1) 0%, rgba(255,223,128,0.8) 15%, rgba(255,140,66,0.2) 45%, transparent 70%);
+            border-radius: 50%; z-index: -3; 
+            box-shadow: 0 0 100px #ff8c42, 0 0 200px #ffdf80;
+            animation: sunPulse 6s infinite alternate ease-in-out;
         }
+        @keyframes sunPulse { 0% { opacity: 0.7; transform: translateX(-50%) scale(0.95); } 100% { opacity: 1; transform: translateX(-50%) scale(1.02); } }
+
+        /* MAGICAL DUST */
+        .dust-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        .dust { position: absolute; background: rgba(255,255,255,0.7); border-radius: 50%; animation: floatDust linear infinite; box-shadow: 0 0 10px #fff; }
+        @keyframes floatDust { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-10vh) scale(1.5); opacity: 0; } }
+
+        /* FIREFLIES */
+        .firefly-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+        .firefly { position: absolute; background: #ffdf80; border-radius: 50%; box-shadow: 0 0 10px #ffdf80, 0 0 20px #fffbe0; animation: hoverFly ease-in-out infinite alternate; }
+        @keyframes hoverFly { 0% { transform: translate(0, 0) scale(0.8); opacity: 0.4; } 100% { transform: translate(15px, -20px) scale(1.2); opacity: 1; } }
+
+        /* FALLING PETALS */
+        .petal-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        .petal { position: absolute; top: -10%; background: linear-gradient(135deg, #ff4d6d 0%, #a4244b 100%); border-radius: 15px 0 15px 0; opacity: 0.8; box-shadow: 0 0 10px rgba(255, 77, 109, 0.3); animation: fallPetal linear infinite; }
+        @keyframes fallPetal { 0% { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0; } 10% { opacity: 0.8; } 90% { opacity: 0.8; } 100% { transform: translateY(110vh) rotate(720deg) translateX(50px); opacity: 0; } }
+
+        /* PAGE SETUP WITH SAFE BOTTOM PADDING (Fixes Button Overlap) */
+        .app-container { position: relative; width: 100%; height: 100%; z-index: 2; }
+        .page { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 2rem 120px 2rem; opacity: 0; visibility: hidden; transform: scale(1.05); transition: all 1s cubic-bezier(0.25, 1, 0.5, 1); z-index: 1; text-align: center; }
+        .page.active { opacity: 1; visibility: visible; transform: scale(1); z-index: 5; }
+
+        /* RESPONSIVE LUXURY TYPOGRAPHY */
+        h1 { font-family: 'Great Vibes', cursive; font-size: clamp(4rem, 10vw, 6.5rem); color: #fff; margin-bottom: 0.5rem; font-weight: normal; text-shadow: 0 5px 20px rgba(0,0,0,0.6); line-height: 1.1; }
+        h2 { font-family: 'Cinzel', serif; font-size: clamp(1.2rem, 4vw, 1.8rem); color: #ffdf80; margin-bottom: 2rem; letter-spacing: 5px; text-transform: uppercase; font-weight: 600; text-shadow: 0 4px 15px rgba(0,0,0,0.8); }
+        p { font-size: clamp(1.4rem, 5vw, 1.8rem); line-height: 1.8; color: #fff; font-weight: 300; font-style: italic; text-shadow: 0 4px 15px rgba(0,0,0,0.8); max-width: 800px; margin: 0 auto; }
+        .highlight { color: #ffdf80; font-family: 'Great Vibes', cursive; font-size: clamp(2.8rem, 8vw, 4rem); display: block; margin-top: 1rem; text-shadow: 0 5px 20px rgba(0,0,0,0.8); line-height: 1.2; }
+
+        /* CLEAN NEXT BUTTON (Redesigned Glow) */
+        .nav-bar { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; z-index: 100; }
+        .nav-btn { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 1rem; letter-spacing: 4px; text-transform: uppercase; padding: 15px 45px; border-radius: 50px; cursor: pointer; backdrop-filter: blur(8px); transition: 0.4s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); outline: none; display: flex; align-items: center; gap: 10px; }
+        .nav-btn:hover { background: rgba(255, 255, 255, 0.9); color: #a4244b; box-shadow: 0 5px 25px rgba(255,223,128,0.5); transform: translateY(-3px); }
+        .nav-btn.disabled { display: none; }
+
+        /* REALISTIC HEART (NO EMOJI) */
+        .heart-container { margin: 2rem 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; }
+        .svg-heart { width: 120px; height: 120px; filter: drop-shadow(0 0 20px rgba(255, 77, 109, 0.8)); transition: 0.3s; }
+        .svg-heart:active { transform: scale(0.9); }
+        .sound-hint { font-family: 'Montserrat'; font-size: 0.8rem; letter-spacing: 4px; color: #ffdf80; margin-top: 20px; text-transform: uppercase; animation: pulseHint 2s infinite; text-shadow: 0 2px 10px #000; }
         
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.8; }
-        }
+        .beating { animation: fastHeartbeat 1s 6; }
+        @keyframes fastHeartbeat { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 77, 109, 0.8)); } 20% { transform: scale(1.2); filter: drop-shadow(0 0 40px rgba(255, 77, 109, 1)); } 40% { transform: scale(1.05); } 60% { transform: scale(1.25); filter: drop-shadow(0 0 50px #fff); } }
+        @keyframes pulseHint { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
-        /* Hide Audio */
-        #bgMusic { display: none; }
+        /* FIXED LUXURY ROSE SVG */
+        .luxury-rose { width: 140px; height: 140px; margin: 1.5rem 0; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5)); animation: breatheRose 4s ease-in-out infinite; }
+        @keyframes breatheRose { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); filter: drop-shadow(0 15px 25px rgba(255, 77, 109, 0.6)); } }
 
-        @media (max-width: 768px) {
-            .title-huge { font-size: 3.2rem; }
-            .title-medium { font-size: 2.2rem; }
-            .body-text { font-size: 1.1rem; }
-            .timer-text { font-size: 2.5rem; }
-            .reason-item { font-size: 1.1rem; padding: 5px 10px; }
-            #poetry-container { font-size: 1.6rem; padding: 0 15px; }
+        /* FIXED MUSIC PLAYER */
+        .music-bar { width: 100%; max-width: 300px; display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: 2rem 0; padding: 15px 20px; background: rgba(255,255,255,0.1); border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .audio-line { flex-grow: 1; height: 2px; background: rgba(255,255,255,0.3); position: relative; }
+        .audio-line::after { content: ''; position: absolute; left: 0; top: -1px; height: 4px; width: 40%; background: #ffdf80; border-radius: 2px; box-shadow: 0 0 8px #ffdf80; }
+
+        /* FIXED ENVELOPE */
+        .envelope-container { position: relative; width: 280px; height: 180px; margin: 2rem auto; cursor: pointer; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); }
+        .envelope-body { position: absolute; bottom: 0; width: 100%; height: 100%; background: #8B0000; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); z-index: 3; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 15px;}
+        .envelope-flap { position: absolute; top: 0; left: 0; border-left: 140px solid transparent; border-right: 140px solid transparent; border-top: 100px solid #a4244b; z-index: 5; transform-origin: top; transition: transform 0.6s; }
+        .letter-paper { position: absolute; bottom: 10px; left: 5%; width: 90%; height: auto; min-height: 180px; background: #fffcf5; border-radius: 8px; z-index: 2; transition: transform 0.6s ease; padding: 25px 15px; box-shadow: 0 0 15px rgba(0,0,0,0.3); background-image: repeating-linear-gradient(transparent, transparent 28px, rgba(255,77,109,0.2) 28px, rgba(255,77,109,0.2) 29px); }
+        .letter-content { font-family: 'Great Vibes', cursive; color: #8B0000; font-size: clamp(1.4rem, 4vw, 1.8rem); line-height: 1.5; text-align: center; }
+        .envelope-container:hover .envelope-flap { transform: rotateX(180deg); z-index: 1; }
+        .envelope-container:hover .letter-paper { transform: translateY(-130px); z-index: 6; box-shadow: 0 15px 25px rgba(0,0,0,0.5); }
+
+        .elegant-line { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #ffdf80, transparent); margin: 1.5rem auto; animation: stretch 3s infinite; }
+        @keyframes stretch { 0%, 100% { width: 40px; opacity: 0.4; } 50% { width: 120px; opacity: 1; } }
+
+        @media (max-width: 768px) { 
+            .glowing-sun { width: 350px; height: 350px; bottom: -5%; }
+            .nav-bar { bottom: 30px; }
+            /* Extra safety padding on mobile */
+            .page { padding: 1.5rem 1.5rem 130px 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <audio id="bgMusic" loop>
-        <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-piano-126.mp3" type="audio/mpeg">
-    </audio>
+    <div class="sunset-sky"></div>
+    <div class="glowing-sun"></div>
+    <div class="firefly-container" id="fireflies"></div>
+    <div class="petal-container" id="petals"></div>
 
-    <div class="slide active" id="slide-1">
-        <h1 class="title-huge">Manisha.</h1>
-        <p class="italic-text">Some feelings deserve more than ordinary words.</p>
-        <button class="btn" onclick="startExperience()">Begin</button>
-    </div>
+    <div class="app-container">
 
-    <div class="slide" id="slide-2">
-        <h2 class="title-medium">My Heart Speaks</h2>
-        <p class="body-text">You bring absolute peace into my most restless days.</p>
-        <p class="body-text">Your presence feels like comfort and strength wrapped into one.</p>
-        <p class="body-text">With you, life isn't just happening; it feels meaningful. Every moment we share is a memory I want to hold onto forever.</p>
-        <button class="btn" onclick="nextSlide(2)">Continue</button>
-    </div>
-
-    <div class="slide" id="slide-3">
-        <h2 class="title-medium">Why I Adore You</h2>
-        <div class="reasons-list">
-            <span class="reason-item">Your smile</span>
-            <span class="reason-item">Your kindness</span>
-            <span class="reason-item">Your ambition</span>
-            <span class="reason-item">The way you care</span>
-            <span class="reason-item">Your beautiful eyes</span>
-            <span class="reason-item">Your warmth</span>
-            <span class="reason-item">Your patience</span>
-            <span class="reason-item">Your pure honesty</span>
+        <div class="page active">
+            <h2>For My Darling</h2>
+            <h1>Mantasha</h1>
+            <div class="elegant-line"></div>
+            <p>A quiet place painted in the colors<br>of how you make me feel.</p>
         </div>
-        <button class="btn" onclick="nextSlide(3)">Continue</button>
-    </div>
 
-    <div class="slide" id="slide-4">
-        <h2 class="title-medium">Dreaming With You</h2>
-        <div class="future-list">
-            <div class="future-item"><div class="dot"></div> Grow together</div>
-            <div class="future-item"><div class="dot"></div> Support each other’s goals</div>
-            <div class="future-item"><div class="dot"></div> Celebrate every milestone</div>
-            <div class="future-item"><div class="dot"></div> Build a beautiful future</div>
-        </div>
-        <button class="btn" onclick="nextSlide(4)">Continue</button>
-    </div>
-
-    <div class="slide" id="slide-5">
-        <div class="heart-icon">❤️</div>
-        <h2 class="title-medium" style="margin-bottom: 0;">Every Second Matters</h2>
-        <div class="timer-text" id="timer">00:00:00:00</div>
-        <p class="italic-text" style="font-size: 1.2rem;">Counting the moments of our journey.</p>
-        <button class="btn" onclick="nextSlide(5)">One Last Thing</button>
-    </div>
-
-    <div class="slide" id="slide-6">
-        <div id="proposal-content">
-            <h1 class="title-huge" style="font-size: 3.5rem;">Will You Love Me Forever?</h1>
-            <div class="btn-group" id="proposal-buttons">
-                <button class="btn btn-primary" onclick="sayYes()">Yes</button>
-                <button class="btn btn-dodge" onmouseover="dodge()" onclick="dodge()">No</button>
+        <div class="page">
+            <h2>Listen Closely</h2>
+            <p>"My heart beats entirely<br>in your rhythm."</p>
+            <div class="heart-container" onclick="playHeartbeat()">
+                <svg class="svg-heart" id="theHeart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="heartGlow" cx="30%" cy="30%" r="70%">
+                            <stop offset="0%" stop-color="#ff9a9e" />
+                            <stop offset="50%" stop-color="#ff4d6d" />
+                            <stop offset="100%" stop-color="#8B0000" />
+                        </radialGradient>
+                    </defs>
+                    <path d="M50 88 C20 88, 5 60, 20 35 C35 10, 55 15, 50 35 C50 15, 75 10, 85 35 C100 60, 80 88, 50 88 Z" fill="url(#heartGlow)"/>
+                    <path d="M30 30 C35 25, 45 28, 40 38" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                </svg>
+                <div class="sound-hint">Tap to feel it</div>
             </div>
         </div>
-        
-        <div id="poetry-container"></div>
+
+        <div class="page">
+            <h2>Eternal Bloom</h2>
+            <svg class="luxury-rose" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48 90 L48 60 M52 90 L52 60" stroke="#2d5a27" stroke-width="2"/>
+                <path d="M50 65 C25 65, 15 40, 30 25 C45 10, 55 10, 50 25 C55 10, 75 10, 70 25 C85 40, 75 65, 50 65 Z" fill="#ff4d6d"/>
+                <path d="M50 55 C35 55, 25 35, 40 25 C45 20, 55 20, 50 25 C55 20, 65 20, 60 25 C75 35, 65 55, 50 55 Z" fill="#a4244b"/>
+                <path d="M50 45 C40 45, 35 30, 45 25 C48 22, 52 22, 50 25 C52 22, 55 22, 55 25 C65 30, 60 45, 50 45 Z" fill="#ffb3c6"/>
+            </svg>
+            <p>"They say sunset is the proof<br>that endings can be beautiful..."</p>
+            <span class="highlight">But with you,<br>it's just the beginning.</span>
+        </div>
+
+        <div class="page">
+            <p>"Before you, my heart<br>was a quiet, empty room."</p>
+            <div class="elegant-line"></div>
+            <span class="highlight">Now, it echoes endlessly<br>with the melody of your name.</span>
+        </div>
+
+        <div class="page">
+            <h2>Quiet Whispers</h2>
+            <div class="envelope-container">
+                <div class="envelope-flap"></div>
+                <div class="letter-paper">
+                    <div class="letter-content">
+                        Even silence<br>sounds beautiful<br>when it carries<br>the memory of your voice.
+                    </div>
+                </div>
+                <div class="envelope-body">
+                    <span style="font-family: 'Cinzel'; color: #ffdf80; font-size: 0.8rem; letter-spacing: 3px;">HOVER OR TAP</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="page">
+            <p>"They talk about soulmates<br>in poems and stories..."</p>
+            <div class="elegant-line"></div>
+            <span class="highlight">I just look at you<br>and understand what it means.</span>
+        </div>
+
+        <div class="page">
+            <h2>Our Vibe</h2>
+            <p>Imagine our favorite song<br>playing right now.</p>
+            <div class="music-bar">
+                <span style="font-size: 1.2rem; color: #ffdf80;">▶</span>
+                <div class="audio-line"></div>
+                <span style="font-family:'Montserrat'; font-size:0.9rem; color: #ffdf80;">1:43</span>
+            </div>
+        </div>
+
+        <div class="page">
+            <h2>Beyond Time</h2>
+            <p>"Distance, time, reality..."</p>
+            <span class="highlight">None of it matters<br>when our souls are already intertwined.</span>
+        </div>
+
+        <div class="page">
+            <p>"Darling..."</p>
+            <div class="elegant-line"></div>
+            <span class="highlight">You are my softest thought,<br>and my strongest desire.</span>
+        </div>
+
+        <div class="page">
+            <p>"If I could pause time..."</p>
+            <span class="highlight">I would freeze the exact moment<br>you look into my eyes.</span>
+        </div>
+
+        <div class="page">
+            <h2>A Promise</h2>
+            <p>"My quiet vow to you..."</p>
+            <span class="highlight">To protect your smile<br>like it's my life's only purpose.</span>
+        </div>
+
+        <div class="page">
+            <p>"You are not just my love."</p>
+            <div class="elegant-line"></div>
+            <span class="highlight">You are my absolute,<br>undeniable destiny.</span>
+        </div>
+
+        <div class="page">
+            <h2>Since I Met You</h2>
+            <p>Every second since you arrived...</p>
+            <span class="highlight">Has been the best part<br>of my existence.</span>
+        </div>
+
+        <div class="page">
+            <p>"I used to look at the stars<br>to find beauty in the dark..."</p>
+            <div class="elegant-line"></div>
+            <span class="highlight">Now, I just look at you.</span>
+        </div>
+
+        <div class="page">
+            <h2>Sanctuary</h2>
+            <p>"Your hands wrapped in mine..."</p>
+            <span class="highlight">It is the only home<br>I will ever need.</span>
+        </div>
+
+        <div class="page">
+            <p>"I don't just love you."</p>
+            <span class="highlight">I cherish every moment<br>I get to spend with you.</span>
+        </div>
+
+        <div class="page">
+            <h2>Across Universes</h2>
+            <p>"If I had a thousand lives..."</p>
+            <span class="highlight">I would spend all of them<br>searching for you.</span>
+        </div>
+
+        <div class="page">
+            <p>"Forever isn't just a word<br>people say to feel safe."</p>
+            <div class="elegant-line"></div>
+            <span class="highlight">Forever is simply<br>what we are.</span>
+        </div>
+
+        <div class="page">
+            <h2>Nobody Else</h2>
+            <p>"There are billions of souls here."</p>
+            <span class="highlight">But my eyes only search<br>for you.</span>
+        </div>
+
+        <div class="page">
+            <h2 style="font-size: 1.8rem; color:#fff; text-shadow: 0 0 15px #fff;">Forever</h2>
+            <div class="elegant-line"></div>
+            <p style="font-size: clamp(2rem, 7vw, 3rem); line-height: 1.5; margin-top: 1rem; color: #ffdf80; font-family: 'Great Vibes', cursive;">This is not just a page.<br>It is every heartbeat<br>I could not say aloud.</p>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 6px; margin-top: 3rem; opacity: 0.6; font-style: normal;">Forever Yours, Aashu</p>
+        </div>
+
+    </div>
+
+    <div class="nav-bar">
+        <button class="nav-btn" id="nxtBtn" onclick="nav(1)">NEXT ✧</button>
     </div>
 
     <script>
-        function startExperience() {
-            let bgMusic = document.getElementById("bgMusic");
-            bgMusic.play().catch(e => console.log("Audio play blocked."));
-            nextSlide(1);
+        // GENERATE FIREFLIES
+        const fireflyCont = document.getElementById('fireflies');
+        for(let i=0; i<25; i++) {
+            let f = document.createElement('div');
+            f.className = 'firefly';
+            f.style.width = Math.random() * 4 + 2 + 'px';
+            f.style.height = f.style.width;
+            f.style.left = Math.random() * 100 + 'vw';
+            f.style.top = Math.random() * 100 + 'vh';
+            f.style.animationDuration = Math.random() * 4 + 3 + 's';
+            f.style.animationDelay = Math.random() * 2 + 's';
+            fireflyCont.appendChild(f);
         }
 
-        function nextSlide(currentNum) {
-            const currentSlide = document.getElementById(`slide-${currentNum}`);
-            const nextSlideElement = document.getElementById(`slide-${currentNum + 1}`);
-
-            // Smooth fade out current slide
-            currentSlide.classList.remove('active');
-
-            // Wait 600ms (breathing room) before fading in the next slide
-            setTimeout(() => {
-                nextSlideElement.classList.add('active');
-            }, 600);
+        // GENERATE FALLING PETALS
+        const petalCont = document.getElementById('petals');
+        for(let i=0; i<30; i++) {
+            let p = document.createElement('div');
+            p.className = 'petal';
+            let size = Math.random() * 15 + 10;
+            p.style.width = size + 'px';
+            p.style.height = size + 'px';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.animationDuration = Math.random() * 8 + 7 + 's';
+            p.style.animationDelay = Math.random() * -15 + 's';
+            petalCont.appendChild(p);
         }
 
-        const startDate = new Date().getTime() - (100 * 24 * 60 * 60 * 1000); 
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = now - startDate;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            const format = (num) => num.toString().padStart(2, '0');
-            document.getElementById("timer").innerHTML = `${format(days)} : ${format(hours)} : ${format(minutes)} : ${format(seconds)}`;
-        }, 1000);
+        // NAVIGATION LOGIC
+        const pages = document.querySelectorAll('.page');
+        const nxtBtn = document.getElementById('nxtBtn');
+        let curr = 0;
 
-        function dodge() {
-            const btn = document.querySelector('.btn-dodge');
-            btn.innerText = "Sure?";
-            const x = (Math.random() * 120) - 60; 
-            const y = (Math.random() * 80) - 40;
-            btn.style.transform = `translate(${x}px, ${y}px)`;
+        function nav(dir) {
+            if(curr === pages.length - 1) return;
+
+            pages[curr].classList.remove('active');
+            curr += dir;
+            pages[curr].classList.add('active');
+
+            if(curr === pages.length - 1) {
+                nxtBtn.style.display = 'none';
+            }
         }
 
-        // Poetry Word by Word Animation
-        function sayYes() {
-            // Hide the question and buttons smoothly
-            document.getElementById('proposal-content').style.opacity = '0';
-            document.getElementById('slide-6').style.background = 'radial-gradient(circle at center, #8a0022 0%, #1a0005 100%)';
+        // 6-SECOND REAL HEARTBEAT SOUND
+        let audioCtx = null;
+        let isPlaying = false;
 
-            setTimeout(() => {
-                document.getElementById('proposal-content').style.display = 'none';
+        function playHeartbeat() {
+            if (isPlaying) return;
+            isPlaying = true;
+
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            const heart = document.getElementById('theHeart');
+            heart.classList.add('beating');
+            setTimeout(() => { 
+                heart.classList.remove('beating'); 
+                isPlaying = false; 
+            }, 6000);
+
+            function thump(freq, timeOffset, duration, vol) {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
                 
-                const poetryContainer = document.getElementById('poetry-container');
-                poetryContainer.style.display = 'block';
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                osc.type = 'sine'; 
+                osc.frequency.setValueAtTime(freq, timeOffset);
+                osc.frequency.exponentialRampToValueAtTime(10, timeOffset + duration);
+                
+                gain.gain.setValueAtTime(vol, timeOffset);
+                gain.gain.exponentialRampToValueAtTime(0.01, timeOffset + duration);
+                
+                osc.start(timeOffset);
+                osc.stop(timeOffset + duration);
+            }
 
-                const poem = "In your eyes, I found my home. In your heart, I found my peace. With you, forever doesn't seem long enough. I promise to love you, today, tomorrow, and always. ❤️";
-                const words = poem.split(" ");
-                let i = 0;
-
-                // Inject words one by one
-                function showWord() {
-                    if (i < words.length) {
-                        let span = document.createElement("span");
-                        
-                        // Add line breaks after specific words to format it beautifully
-                        if (words[i] === "home." || words[i] === "peace." || words[i] === "enough.") {
-                            span.innerHTML = words[i] + "<br><br>";
-                        } else {
-                            span.innerHTML = words[i] + " ";
-                        }
-                        
-                        span.className = "poetry-word";
-                        poetryContainer.appendChild(span);
-                        
-                        // Trigger animation
-                        setTimeout(() => span.classList.add("visible"), 50);
-                        
-                        i++;
-                        setTimeout(showWord, 350); // 350ms gap between each word
-                    }
-                }
-                showWord();
-            }, 800); // Wait for the question to fade out before starting poetry
+            let now = audioCtx.currentTime;
+            
+            for(let i = 0; i < 6; i++) {
+                let offset = now + (i * 1.0);
+                thump(45, offset, 0.4, 1.5);           // Lub
+                thump(55, offset + 0.25, 0.4, 1.2);    // Dub
+            }
         }
     </script>
+
 </body>
 </html>
